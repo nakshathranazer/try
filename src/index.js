@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route } from "react-router-dom";
+import DemoSlider from "./DemoSlider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <div>
+      <Route exact path="/" component={App} />
+      <Route eaxct path="/card" component={DemoSlider} />
+    </div>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
